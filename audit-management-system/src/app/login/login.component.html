@@ -1,0 +1,55 @@
+<div class="col-md-12">
+    <h3 style="text-align: center;color: blue;"> Welcome to  Audit Management Portal</h3>
+    <div class="card card-container">
+      <img 
+        id="profile-img"
+        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        class="profile-img-card"
+      />
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="userId">Username</label>
+          <input type="text" class="form-control" name="userId" placeholder="Enter Username"
+           [(ngModel)]="form.userId"
+            required
+            #userId="ngModel"/>
+            
+          <div class="alert alert-danger"  role="alert" *ngIf="userId.errors && f.submitted">
+            userId is required!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Enter Password"
+            [(ngModel)]="form.password" required minlength="6" #password="ngModel"/>
+
+          <div class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted" >
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">
+              Password must be at least 6 characters
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Login
+          </button>
+        </div>
+        <div class="form-group">
+          <div
+            class="alert alert-danger"
+            role="alert"
+            *ngIf="f.submitted && isLoginFailed"
+          >
+            Login failed: {{ errorMessage }}
+          </div>
+        </div>
+      </form>
+  
+      <div class="alert alert-success" *ngIf="isLoggedIn">
+        Congratulation Login Successfull !!.
+        <button class="btn btn-primary btn-block"  (click)="onAudit()"> Start Audditing</button>
+      </div>
+    </div>
+  </div>
+  

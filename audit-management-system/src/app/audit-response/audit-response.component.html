@@ -1,0 +1,28 @@
+<div class="containter">
+    <table class="table " style="background-color: rgb(223, 234, 240);">
+        <thead>
+          <tr>
+            <th>Audit Type</th>
+            <th>Audit Date</th>
+            <th>Project Name</th>
+            <th>Project Manager</th>
+            <th>Application Owner</th>
+            <th>ExecutionStatus</th>
+            <th>RemedialActionDuration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{response.auditType}}</td>
+            <td>{{date}}</td>
+            <td>{{response.projectName}}</td>
+            <td>{{response.managerName}}</td>
+            <td>{{response.ownerName}}</td>
+            <!-- <td  style="background-color: blue;">{{response.executionStatus}}</td> -->
+            <td *ngIf="executionstatus" style="background-color: rgb(228, 135, 135);">{{response.executionStatus}}</td>
+            <td *ngIf="!executionstatus" style="background-color: greenyellow;">{{response.executionStatus}}</td>
+            <td>{{response.duration}}</td>
+          </tr>     
+        </tbody>
+    </table>
+</div>

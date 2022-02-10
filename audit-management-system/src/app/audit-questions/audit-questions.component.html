@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row" >
+    <div class="col xs 12" >
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"  novalidate>
+        <h2>Audit Questions  for Audit Type <u><b>{{audittype}}</b></u></h2>
+      <div [formGroup]="formgroup" class="form-group list-group-item"  style="background-color: rgb(186, 196, 204);" 
+      *ngFor="let response of responses" >
+        <label class="list-group-item-header"><b>{{response.questions}}</b></label>
+        <br>
+        <div class="form-check-inline">
+          <label class="form-check-label" >
+            <input type="radio" class="form-check-input" id="{{response.questionId}}" value="YES" 
+             [formControlName]="response.questionId" required > Yes
+          </label>
+        </div>
+        <div class="form-check-inline" >
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" id="{{response.questionId}}" value="NO"
+             [formControlName]="response.questionId"  > No
+          </label>
+        </div>
+      </div> 
+         <span *ngIf="!formgroup.valid" style="background-color: Red; color: yellow;"> Please Answer all Questions</span>
+       <div class="form-group">
+         <button class="btn btn-primary btn-block" type="submit" [disabled] = "!formgroup.valid" >
+          Submit
+         </button>
+      </div>
+    </form>
+   </div>
+  </div> 
+</div>
+

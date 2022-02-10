@@ -1,0 +1,68 @@
+<div class="col-md-12" >
+    <h1 style="text-align: center;color: rgb(172, 172, 241);">Project Details</h1>
+    <div class="card card-container" style="background-color: lightgreen;">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="projectname">Project Name</label>
+          <input type="text" class="form-control" name="projectname" placeholder="Enter Project Name"
+           [(ngModel)]="form.projectname"
+            required
+            #projectname="ngModel"
+          />
+          <div class="alert alert-danger"  role="alert" *ngIf="projectname.errors && f.submitted">
+            Project Name is required!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="projectmanager">Project Manager</label>
+          <input type="text" class="form-control" name="projectmanager" placeholder="Enter Project Manager Name"
+          [(ngModel)]="form.projectmanager" required #projectmanager="ngModel"/>
+  
+          <div class="alert alert-danger" role="alert" *ngIf="projectmanager.errors && f.submitted" >
+            <div *ngIf="projectmanager.errors.required">Project Manager Name is required!</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="applicationowner">Application Owner</label>
+          <input type="text" class="form-control"  name="applicationowner" placeholder="Enter Application Owner Name"
+          [(ngModel)]="form.applicationowner" required #applicationowner="ngModel"/>
+  
+          <div class="alert alert-danger" role="alert" *ngIf="applicationowner.errors && f.submitted" >
+            <div *ngIf="applicationowner.errors.required">Application Owner Name is required !</div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Audit Type</label>
+          <div class="form-check-inline">
+            <label class="form-check-label" for="audittype">
+              <input type="radio" class="form-check-input" id="audittype" value="Internal"
+              [(ngModel)]="form.audittype" name="audittype"  #audittype="ngModel" required> Internal
+            </label>
+          </div>
+          <div class="form-check-inline" >
+            <label class="form-check-label" >
+              <input type="radio" class="form-check-input" id="audittype" value="Other" 
+              [(ngModel)]="form.audittype" name="audittype"#audittype="ngModel"> Other
+            </label>
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="audittype.errors && f.submitted" >
+            <div *ngIf="audittype.errors.required">Audit Type is required !</div>
+          </div> 
+        </div> 
+    
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+        <div class="form-group">
+          <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+            Login failed: {{ errorMessage }}
+          </div>
+        </div>
+      </form>
+  
+    </div>
+  </div>
+  
+  
