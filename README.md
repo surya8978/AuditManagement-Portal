@@ -1,1 +1,9 @@
-# AuditManagement-Portal
+# AuditManagement-Portal!
+![Flow Chart](https://user-images.githubusercontent.com/52568319/153456303-3418bc09-d3fa-43b2-a338-a4661a7420f4.jpg)
+![Screenshot (808)](https://user-images.githubusercontent.com/52568319/153457361-5b958855-6d5a-4a34-b549-59e6233056e1.png)
+![Screenshot (810)](https://user-images.githubusercontent.com/52568319/153457376-00672bc1-8530-493e-b09c-aed78cfd0d17.png)
+![Screenshot (811)](https://user-images.githubusercontent.com/52568319/153457392-ec62887c-74c5-4759-be55-0ff545d9cacc.png)
+![Screenshot (813)](https://user-images.githubusercontent.com/52568319/153457607-62bcbad2-8516-4e92-93e4-8758bfb8f4f4.png)
+![Screenshot (815)](https://user-images.githubusercontent.com/52568319/153457624-2202d869-38c3-4a5c-bc7e-783805637778.png)
+![Screenshot (818)](https://user-images.githubusercontent.com/52568319/153457639-9021c85d-dad5-469c-a406-0fa346fc1656.png)
+![Screenshot (844)](https://user-images.githubusercontent.com/52568319/153457423-83a49feb-680e-4906-9983-a9ffaaefb51e.png)
