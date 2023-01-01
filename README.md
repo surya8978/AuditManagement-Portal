@@ -1,4 +1,8 @@
 # AuditManagement-Portal!
+### Front End : Angular 12 (use npm install and ng serve run)
+### Backend : JAVA 11
+### Database : My SQL
+### Deployement: AWS (yml file and Docker file available)
 ![Flow Chart](https://user-images.githubusercontent.com/52568319/153456303-3418bc09-d3fa-43b2-a338-a4661a7420f4.jpg)
 ![Screenshot (808)](https://user-images.githubusercontent.com/52568319/153457361-5b958855-6d5a-4a34-b549-59e6233056e1.png)
 ![2](https://user-images.githubusercontent.com/52568319/153463268-19ec3f60-0d28-4bd1-89a8-07249276ac0e.png)
